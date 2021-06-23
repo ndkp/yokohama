@@ -1,1 +1,63 @@
 @charset "UTF-8";
+
+header,nav,main,aside,footer{
+    border: 1px solid #999;
+    padding:20px 30px;
+    background-color: #fff;
+}
+header{
+    color: #fff;
+    background-color: #39f;
+}
+footer{
+    text-align: center;
+}
+
+table{
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    border-collapse: collapse; /* 結合の仕方　*/
+}
+th,td{
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+#wrapper{
+    width: 1000px;
+    margin:20px auto;
+}
+
+body{
+    color: #555;
+    background-color: #eee;
+    font-size: 16px;
+    font-family: "メイリオ",sans-serif;
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 24px
+}
+h2{
+    font-size: 20px;
+}
+h3{
+    font-size: 18px;
+}
+h2,h3{
+    color: #800;
+    font-weight: normal;
+}
+p{
+    line-height: 1.8em; /*行間が本文1文字分の大きさの1.8倍　1だと行間ナシ　2だと丸々1行分*/
+}
+blockquote p{
+    font-weight: bold;
+}
+
+nav ul li{
+    list-style: none;
+}
