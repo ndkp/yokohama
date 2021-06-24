@@ -1,31 +1,45 @@
 @charset "UTF-8";
 
-header,nav,main,aside,footer{
-    border: 1px solid #999;
+*{
+    box-sizing:border-box;
+}
+
+header,main,aside,footer{
     padding:20px 30px;
-    background-color: #fff;
 }
 header{
     color: #fff;
     background-color: #39f;
+    display: flex; /*横並び*/
+    align-items: center; /*横並びを中央揃え start上 end下*/ 
 }
 footer{
     text-align: center;
 }
 
 table{
+    width: 300px;
     border-top: 1px solid #999;
     border-left: 1px solid #999;
     border-collapse: collapse; /* 結合の仕方　*/
 }
 th,td{
+    padding: 5px;
     border-right: 1px solid #999;
     border-bottom: 1px solid #999;
+}
+th{
+    background-color: #ead9ff;
+}
+td{
+    background-color: #d7eeff;
+    text-align: right;
 }
 
 #wrapper{
     width: 1000px;
     margin:20px auto;
+    background-color: #fff;
 }
 
 body{
@@ -35,9 +49,11 @@ body{
     font-family: "メイリオ",sans-serif;
     font-weight: normal;
 }
+
 a{
     text-decoration: none;
 }
+
 h1{
     font-size: 24px
 }
@@ -47,17 +63,76 @@ h2{
 h3{
     font-size: 18px;
 }
+
 h2,h3{
     color: #800;
     font-weight: normal;
+    border-bottom: 1px solid #800;
 }
+
 p{
     line-height: 1.8em; /*行間が本文1文字分の大きさの1.8倍　1だと行間ナシ　2だと丸々1行分*/
 }
+
 blockquote p{
     font-weight: bold;
 }
 
+/*ナビゲーション*/
+nav ul{
+    margin: 0px;
+    padding: 0px; /*隙間をなくす*/
+}
 nav ul li{
     list-style: none;
+    text-align: center;
+    float: left;
+}
+nav a{
+    display: block;
+    width: 250px;
+    background-color: #808;
+    color: #fff;
+    font-size: 16px;
+    line-height: 3em;
+    transition: 0.5s ease/*緩やかに*/;
+}
+nav a:hover{
+    background-color: #a0a;
+    color: #fff;
+}
+
+main{
+    width: 600px;
+    float: left;
+}
+
+aside{
+    width: 400px;
+    float: right;
+}
+
+#banner{
+    clear: both;
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer{
+    clear: both;
+}
+
+h3 img{
+    margin-right: 0.5em; /*半角開ける*/
+    vertical-align: middle; /*中央揃え （ ×ブロックレベル ） */
+}
+
+ol li:nth-of-type(even){ /* number+th　:何番目の要素か(偶数番目) */
+    background-color: #ddd;
+}
+
+a img:hover{
+    opacity: 0.5;
 }
